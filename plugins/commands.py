@@ -28,9 +28,9 @@ async def start(c, m, cb=False):
     # start text
     text = f"""Hey! {m.from_user.mention(style='md')}
 
-💡 ** I am Telegram File Store Bot**
+💡 ** I am Telegram File Store Bot 😁**
 
-`You can store your Telegram Media for permanent Link!`
+`You can store your Telegram Media and get a permanent Link! 🙂`
 
 
 **👲 Maintained By:** {owner.mention(style='md')}
@@ -39,11 +39,11 @@ async def start(c, m, cb=False):
     # Buttons
     buttons = [
         [
-            InlineKeyboardButton('My Father 👨‍✈️', url=f"https://t.me/{owner_username}"),
-            InlineKeyboardButton('Help 💡', callback_data="help")
+            InlineKeyboardButton('My Owner 🤠', url=f"https://t.me/{owner_username}"),
+            InlineKeyboardButton('Help 😣', callback_data="help")
         ],
         [
-            InlineKeyboardButton('About 📕', callback_data="about")
+            InlineKeyboardButton('About 👤', callback_data="about")
         ]
     ]
 
@@ -67,7 +67,7 @@ async def start(c, m, cb=False):
 
             if string.empty:
                 owner = await c.get_users(int(OWNER_ID))
-                return await m.reply_text(f"🥴 Sorry bro your file was deleted by file owner or bot owner\n\nFor more help contact my owner 👉 {owner.mention(style='md')}")
+                return await m.reply_text(f"🥴 Sorry bro! your file was deleted by file owner or bot owner\n\nFor more help contact my owner 👉 {owner.mention(style='md')}")
             message_ids = (await decode(string.text)).split('-')
             for msg_id in message_ids:
                 msg = await c.get_messages(int(chat_id), int(msg_id)) if not DB_CHANNEL_ID else await c.get_messages(int(DB_CHANNEL_ID), int(msg_id))
@@ -92,7 +92,7 @@ async def start(c, m, cb=False):
         if as_uploadername:
             if chat_id.startswith('-100'):
                 channel = await c.get_chat(int(chat_id))
-                caption += "**--Uploader Details:--**\n\n" 
+                caption += "**--Uploader Details 😶:--**\n\n" 
                 caption += f"__📢 Channel Name:__ `{channel.title}`\n\n" 
                 caption += f"__🗣 User Name:__ @{channel.username}\n\n" if channel.username else "" 
                 caption += f"__👤 Channel Id:__ `{channel.id}`\n\n" 
@@ -100,7 +100,7 @@ async def start(c, m, cb=False):
                 caption += f"__👁 Members Count:__ {channel.members_count}\n\n" if channel.members_count else ""
             else:
                 user = await c.get_users(int(chat_id)) 
-                caption += "**--Uploader Details:--**\n\n" 
+                caption += "**--Uploader Details 😶:--**\n\n" 
                 caption += f"__🦚 First Name:__ `{user.first_name}`\n\n" 
                 caption += f"__🐧 Last Name:__ `{user.last_name}`\n\n" if user.last_name else "" 
                 caption += f"__👁 User Name:__ @{user.username}\n\n" if user.username else "" 
@@ -152,7 +152,7 @@ async def batch(c, m):
         if i == 1:
             media = await c.ask(chat_id=m.from_user.id, text='Send me some files or videos or photos or text or audio. If you want to cancel the process send /cancel')
             if media.text == "/cancel":
-                return await m.reply_text('Cancelled Successfully ✌')
+                return await m.reply_text('Cancelled Successfully 😕')
             files.append(media)
         else:
             try:
@@ -168,7 +168,7 @@ async def batch(c, m):
                 await m.reply_text(text="Something went wrong. Try again later.")
         i += 1
 
-    message = await m.reply_text("Generating shareable link 🔗")
+    message = await m.reply_text("Generating shareable link 🔗🌐")
     string = ""
     for file in files:
         if DB_CHANNEL_ID:
