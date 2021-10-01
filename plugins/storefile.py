@@ -18,7 +18,7 @@ async def storefile(c, m):
     if not m.photo:
         text = "--**🗃️ File Details:**--\n\n\n"
         text += f"📂 __File Name:__ `{media.file_name}`\n\n" if media.file_name else ""
-        text += f"💽 __Mime Type:__ `{media.mime_type}`\n\n" if media.mime_type else ""
+        text += f"💽 __File Type:__ `{media.mime_type}`\n\n" if media.mime_type else ""
         text += f"📊 __File Size:__ `{humanbytes(media.file_size)}`\n\n" if media.file_size else ""
         if not m.document:
             text += f"🎞 __Duration:__ `{TimeFormatter(media.duration * 1000)}`\n\n" if media.duration else ""
@@ -47,8 +47,8 @@ async def storefile(c, m):
 
     # making buttons
     buttons = [[
-        InlineKeyboardButton(text="Open Url 🔗", url=url),
-        InlineKeyboardButton(text="Share Link 👤", url=share_url)
+        InlineKeyboardButton(text="Open Url 🌐", url=url),
+        InlineKeyboardButton(text="Share Link 🤝", url=share_url)
         ],[
         InlineKeyboardButton(text="Delete 🗑", callback_data=f"delete+{msg.message_id}")
     ]]
@@ -73,7 +73,7 @@ async def storefile_channel(c, m):
     if not m.photo:
         text = "**🗃️ File Details:**\n\n\n"
         text += f"📂 __File Name:__ `{media.file_name}`\n\n" if media.file_name else ""
-        text += f"💽 __Mime Type:__ `{media.mime_type}`\n\n" if media.mime_type else ""
+        text += f"💽 __File Type:__ `{media.mime_type}`\n\n" if media.mime_type else ""
         text += f"📊 __File Size:__ `{humanbytes(media.file_size)}`\n\n" if media.file_size else ""
         if not m.document:
             text += f"🎞 __Duration:__ `{TimeFormatter(media.duration * 1000)}`\n\n" if media.duration else ""
@@ -102,8 +102,8 @@ async def storefile_channel(c, m):
 
     # making buttons
     buttons = [[
-        InlineKeyboardButton(text="Open Url 🔗", url=url),
-        InlineKeyboardButton(text="Share Link 👤", url=share_url)
+        InlineKeyboardButton(text="Open Url 🌐", url=url),
+        InlineKeyboardButton(text="Share Link 🤝", url=share_url)
     ]]
 
     # Editing and adding the buttons
