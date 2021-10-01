@@ -70,9 +70,9 @@ async def about_cb(c, m):
 
 👨‍💻 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫: {owner.mention(style='md')}
 
-📢 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: [Artificial Bot UPDATES](https://t.me/)
+📢 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: [Artificial Bot UPDATES](https://t.me/joinchat/7H_9zPG4gbIwOTI1)
 
-👥 𝐆𝐫𝐨𝐮𝐩: [Artificial Bot SUPPORT](https://t.me/Ns_Bot_supporters)
+👥 𝐆𝐫𝐨𝐮𝐩: [Artificial Bot SUPPORT](https://t.me/nnnnnnnnn)
 
 🌐𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞: [Press Me 🥰](https://github.com/Artificial-dev/TG-File-Store)
 """
