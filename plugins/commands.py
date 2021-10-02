@@ -149,7 +149,7 @@ async def batch(c, m):
     i = 1
 
     while m.from_user.id in BATCH:
-        if i == 1:
+        if i += 1:
             media = await c.ask(chat_id=m.from_user.id, text='Send me some files or videos or photos or text or audio. If you want to cancel the process send /cancel')
             if media.text == "/cancel":
                 return await m.reply_text('Cancelled Successfully 😕')
